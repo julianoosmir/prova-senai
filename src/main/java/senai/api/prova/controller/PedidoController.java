@@ -1,15 +1,15 @@
 package senai.api.prova.controller;
 
+import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import senai.api.prova.entity.Pedido;
 import senai.api.prova.service.PedidoService;
 
-import java.util.List;
 
 @CrossOrigin(origins = "*",allowedHeaders = "*")
 @RestController
-@RequestMapping(value = "/pedido")
+@RequestMapping(value = "/pedidos")
 public class PedidoController {
     @Autowired
     private PedidoService pedidoService;

@@ -1,11 +1,11 @@
 package senai.api.prova.entity;
 
 import jakarta.persistence.*;
+import java.math.BigDecimal;
 import lombok.Data;
 import org.hibernate.annotations.Fetch;
 import org.hibernate.annotations.FetchMode;
 
-import java.math.BigDecimal;
 
 @Entity
 @Data
@@ -16,10 +16,10 @@ public class Pedido {
 
     private String descricao;
 
-    private BigDecimal valor;
+    private BigDecimal valor;   
 
-    @OneToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "cliente_id", nullable = false)
+    @ManyToOne(fetch= FetchType.LAZY)
+    @JoinColumn(name = "cliente_id", nullable = true)
     @Fetch(FetchMode.JOIN)
     private Cliente cliente;
 }

@@ -1,17 +1,14 @@
 package senai.api.prova.entity;
 
 import jakarta.persistence.*;
-
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import senai.api.prova.model.Endereco;
 
-import org.hibernate.annotations.Fetch;
-import org.hibernate.annotations.FetchMode;
 
-import java.util.List;
+
 
 
 @Entity
@@ -29,4 +26,5 @@ public class Cliente {
     
     @Embedded
     private Endereco endereco;
+
 }
